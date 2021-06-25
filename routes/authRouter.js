@@ -2,7 +2,7 @@ const express = require("express")
 const authController = require('../controlers/authControler')
 const router = express.Router()
 const {check} = require('express-validator')
-
+router.get('/confirmationEmail', authController.confirmationEmail)
 router.post('/registration', [
     check('name', "name is empty").notEmpty(),
     check('surname', "surname is empty").notEmpty(),

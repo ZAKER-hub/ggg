@@ -7,7 +7,7 @@ const { count } = require('console');
 const main = express()
 main.use(express.json())
 main.use("/auth", authRouter)
-
+main.use(express.static(__dirname + '/img/'));
 const db_path = "./data/db"
 const db_port = 27017
 const server_port = 5000
